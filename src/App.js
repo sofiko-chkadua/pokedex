@@ -1,11 +1,10 @@
 import './App.css';
-// import Navbar from './components/Navbar/Navbar'
-// import Cards from './components/Cards/Cards'
 import Card from './components/Card/Card'
 import Catchedcards from './components/Catchedcards/Catchedcards'
+import PokemonPage from './components/PokemonPage/PokemonPage';
 
-import { BrowserRouter as Router, Switch, Route, NavLink, Redirect } from "react-router-dom"
-// import { useEffect, useState } from 'react';
+
+import { BrowserRouter as Router, Switch, Route, NavLink } from "react-router-dom"
 
 function App(props) {
 
@@ -13,7 +12,8 @@ function App(props) {
   return (
     <>
 
-      <Router>
+
+      {<Router>
         <nav className="navbar">
           <ul className="navbar__list">
             <li className="navbar__item"><NavLink className="navbar__link" to="/">All pokemons</NavLink></li>
@@ -23,8 +23,13 @@ function App(props) {
         <Switch>
           <Route exaxt path="/Catchedcards" render={() => <Catchedcards />}></Route>
           <Route exaxt path="/" render={() => <Card />}></Route>
+
+          {/* здесь ниже должен поидее был быть роутинг для стр отдельного покемона */}
+          <Route exaxt path="/:name" render={() => <PokemonPage />}></Route>
+
+
         </Switch>
-      </Router>
+      </Router> }
     </>
   );
 

@@ -1,10 +1,12 @@
+// import { useParams } from "react";
 
 
-function PokemonPage() {
+function  PokemonPage() {
+    // const { param } = useParams();
+
+    
     return (
-        <div>
-        <h1>dfghj</h1>
-        </div>
+        <h1>dcfvgbh </h1>
     )
 }
 

@@ -76,6 +76,7 @@ text-decoration: none;
 .pagination {
   display: flex;
   flex-wrap: wrap;
+  margin: 0;
 }
 
 .pagination__item {
@@ -88,4 +89,14 @@ padding: 3px;
 .pagination__list {
   display: flex;
   padding: 0;
+}
+
+.paginarion__doths {
+  list-style: none;
+  cursor: pointer;
+}
+
+.pagination__button {
+  color: black;
+
 }
