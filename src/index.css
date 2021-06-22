@@ -6,13 +6,20 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
  color: white;
- background: linear-gradient(to right, #07080a -18.14%, #15171b 362.3%);
+ /* background: linear-gradient(to right, #07080a -18.14%, #15171b 362.3%); */
+ background-color: grey;
 }
 
 .page__content {
   max-width: 1160px;
   margin: 0 auto;
   overflow: hidden;
+}
+
+@media screen and (max-width: 928px) {
+  .page-container {
+    max-width: 928px;
+  }
 }
 
 
@@ -28,7 +35,6 @@
   max-width: 300px;
   margin: 0;
   padding: 0;
-  margin-bottom: 30px;
 }
 
 .navbar__item {
@@ -74,9 +80,18 @@ text-decoration: none;
 /* потом отделить */
 
 .pagination {
+  padding-bottom: 60px;
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.pagination__container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-end;
   margin: 0;
+  padding: 0;
 }
 
 .pagination__item {
@@ -97,6 +112,15 @@ padding: 3px;
 }
 
 .pagination__button {
-  color: black;
+  color: white;
+  border: none;
+  display: block;
+  background: transparent;
+  padding: 5px;
 
+}
+
+.pagination__list {
+  margin: 0;
+  padding: 0;
 }

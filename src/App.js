@@ -6,7 +6,7 @@ import PokemonPage from './components/PokemonPage/PokemonPage';
 
 import { BrowserRouter as Router, Switch, Route, NavLink } from "react-router-dom"
 
-function App(props) {
+function App({props}) {
 
 
   return (
@@ -16,17 +16,15 @@ function App(props) {
       {<Router>
         <nav className="navbar">
           <ul className="navbar__list">
-            <li className="navbar__item"><NavLink className="navbar__link" to="/">All pokemons</NavLink></li>
+            <li className="navbar__item"><NavLink className="navbar__link" to="/Card">All pokemons</NavLink></li>
             <li className="navbar__item"><NavLink className="navbar__link" to="/Catchedcards">Catched pokemons</NavLink></li>
           </ul>
         </nav>
         <Switch>
           <Route exaxt path="/Catchedcards" render={() => <Catchedcards />}></Route>
-          <Route exaxt path="/" render={() => <Card />}></Route>
-
+          <Route exaxt path="/Card" render={() => <Card />}></Route>
           {/* здесь ниже должен поидее был быть роутинг для стр отдельного покемона */}
-          <Route exaxt path="/:name" render={() => <PokemonPage />}></Route>
-
+          <Route exaxt path="/:name" render={() => <PokemonPage/>}></Route>
 
         </Switch>
       </Router> }

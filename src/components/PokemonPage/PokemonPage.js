@@ -1,12 +1,13 @@
-// import { useParams } from "react";
+import { useParams } from "react-router";
 
 
-function  PokemonPage() {
-    // const { param } = useParams();
+ const PokemonPage = ({pokemons}) => {
+    const {name} = useParams();
+
 
     
     return (
-        <h1>dcfvgbh </h1>
+        <h1>Pokemon name is {name}</h1>
     )
 }
 
